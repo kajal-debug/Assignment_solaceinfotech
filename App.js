@@ -40,7 +40,7 @@ app.use(express.json());
 // MongoDB connection
 async function connectToDatabase() {
     try {
-      await mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017');
+      await mongoose.connect('mongodb://127.0.0.1:27017');
       console.log('Connected to MongoDB Successfully');
     } catch (error) {
       console.error('MongoDB connection error:', error);
